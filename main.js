@@ -25,6 +25,17 @@ async function getPersonData() {
   }
 }
 
-personContainter.forEach((_) =>
-  getPersonData().then((response) => console.log(response))
+personContainter.forEach((container) =>
+  getPersonData().then((data) => {
+    console.log(data);
+    const figureChildren = container.children;
+    figureChildren[0].src = data.picture.medium; //Img
+
+    const figCaptionChildren = figureChildren[1].children;
+    figCaptionChildren[0].textContent = `${data.name.title} ${data.name.first} ${data.name.last}`; //Name
+
+    figCaptionChildren[1].textContent = `${data.location.country} ${data.location.state} ${data.location.city}`; //Location
+
+    figCaptionChildren[2].textContent = `${data.phone}`;
+  })
 );
