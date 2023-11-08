@@ -1,0 +1,41 @@
+.roundImg {
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 0.1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 128px;
+  height: 128px;
+}
+
+.masterSlider {
+  width: 80%;
+  margin: auto;
+}
+
+.sliderTeam {
+  overflow: hidden;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+}
+
+figure {
+  opacity: 0.5;
+  transform: scale(0.5);
+  display: inline-block;
+  text-align: center;
+  transition: ease-in-out;
+}
+
+.activeItem {
+  opacity: 1;
+  transform: scale(1) translateZ(0px);
+}
+
+figcaption {
+  font-size: 0.5rem;
+}
